@@ -12,8 +12,8 @@ public class LoginPage {
         return this;
     }
 
-    public void validVerify(Datahelper.VerificationCode verificationCode) {
-        $("[name=code]").setValue(verificationCode.getCode());
-        $("button").click();
-    }
+//    public void validVerify(Datahelper.VerificationCode verificationCode) {
+//        $("[name=code]").setValue(verificationCode.getCode());
+//        $("button").click();
+//    }
 }

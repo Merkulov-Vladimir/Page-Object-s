@@ -2,6 +2,9 @@ package ru.netology.web.data;
 
 import lombok.Value;
 
+import static com.codeborne.selenide.Selectors.withText;
+import static com.codeborne.selenide.Selenide.$$;
+
 public class Datahelper {
     @Value
     public static class AuthInfo {
@@ -21,6 +24,8 @@ public class Datahelper {
     public static VerificationCode getVerificationCodeFor(AuthInfo authInfo) {
         return new VerificationCode("12345");
     }
+
+
 
     @Value
     public static class CardInfo {

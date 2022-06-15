@@ -3,6 +3,7 @@ package ru.netology.web.page;
 import com.codeborne.selenide.ElementsCollection;
 import lombok.val;
 
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class DashboardPage {
@@ -25,6 +26,10 @@ public class DashboardPage {
         return 0;
     }
 
+    public TransferMoney transferMoney(int number) {
+        $$(withText("Пополнить")).get(number).click();
+        return new TransferMoney();
+    }
 
     private int extractBalance(String text) {
         val start = text.indexOf(balanceStart);
